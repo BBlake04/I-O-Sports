@@ -1,5 +1,5 @@
 
-public class FootballPlayer extends SportsPlayerAbstract{
+public class FootballPlayer extends SportsPlayerAbstract{	// Class with some initialized parameters with some setters/getters/actions
 
 	String specialty; // FootballPlayers unique variable.
 
@@ -12,8 +12,7 @@ public class FootballPlayer extends SportsPlayerAbstract{
 		setSpecialty(specialty);
 	}
 
-	public void setSpecialty(String specialty) { // Only Offense, Defense, and
-													// Special-Teams.
+	public void setSpecialty(String specialty) { // Only Offense, Defense, and Special-Teams.
 		this.specialty = specialty;
 	}
 
