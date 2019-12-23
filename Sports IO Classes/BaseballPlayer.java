@@ -1,5 +1,5 @@
 
-public class BaseballPlayer extends SportsPlayerAbstract{
+public class BaseballPlayer extends SportsPlayerAbstract{	// Class with some initialized parameters and setters/getters
 	String handing; // BaseballPlayers unique variables.
 	int battingPosition;
 
@@ -18,8 +18,7 @@ public class BaseballPlayer extends SportsPlayerAbstract{
 		this.battingPosition = battingPosition;
 	}
 
-	public void setHanding(String handing) { // Only Right-handed, Left-handed,
-												// or Both.
+	public void setHanding(String handing) { // Only Right-handed, Left-handed, or both
 		this.handing = handing;
 	}
 
