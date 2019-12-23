@@ -1,5 +1,5 @@
 
-public class Athlete extends Person{
+public class Athlete extends Person{	// Class with some initialized parameters and some setters
 		public String team;
 		
 		public Athlete(){
