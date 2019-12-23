@@ -133,9 +133,7 @@ public class TestClass {
 		a[14].setRival("None");
 		// End setting objects.
 
-		for (int i = 15; i < a.length; i++) { // Initializes all empty elements
-												// to junk data and polymorphs
-												// them to BasketballPlayers.
+		for (int i = 15; i < a.length; i++) { // Initializes all empty elements to junk data and polymorphs them to BasketballPlayers
 			a[i] = new BasketballPlayer();
 			a[i].setFirstName("B");
 			a[i].setLastName("B");
@@ -146,12 +144,9 @@ public class TestClass {
 		}
 
 		Scanner sc = new Scanner(System.in);
-		String input = "Blank"; // Avoid null pointer exception by initializing
-								// the variable.
-		String sportInput = "Blank"; // Avoid null pointer exception by
-										// initializing the variable.
-		int inputInt = 0; // Avoid null pointer exception by initializing the
-							// variable.
+		String input = "Blank"; // Avoid null pointer exception by initializing the variable.
+		String sportInput = "Blank"; // Avoid null pointer exception by initializing the variable.
+		int inputInt = 0; // Avoid null pointer exception by initializing the variable.
 		boolean checker = false;
 		boolean checker2 = false;
 		String menu = "A. Add a new Person.\n" + "B. Display all People.\n"
@@ -163,19 +158,9 @@ public class TestClass {
 
 		while (!input.equals("Q")) { // Exit only when Q is input.
 			input = sc.next();
-			input = input.toUpperCase(); // Turn inputs into capitals for easier
-											// checking.
-			if (input.equals("A") || input.equals("B") || input.equals("C") || input.equals("D") || input.equals("Q")) { // If
-																															// input
-																															// is
-																															// one
-																															// of
-																															// the
-																															// mentioned,
-																															// proceed
-																															// in
-																															// loop.
-				checker = true;
+			input = input.toUpperCase(); // Turn inputs into capitals for easier checking.
+			if (input.equals("A") || input.equals("B") || input.equals("C") || input.equals("D") || input.equals("Q")) { // If input is one of the mentioned, proceed in loop.
+				checker = true;	
 			}
 			if (checker == false) {
 				System.out.println(input + " is not an valid option\nPlease repick a valid Option: \n" + menu);
@@ -201,15 +186,13 @@ public class TestClass {
 					sportInput = "BASKETBALL";
 				}
 				if (sportInput.equals("BASKETBALL")) {
-					a[x] = new BasketballPlayer(); // Polymorph from person to
-													// BasketballPlayer.
+					a[x] = new BasketballPlayer(); // Polymorph from person to BasketballPlayer.
 					System.out.println("Enter the persons rival: ");
 					input = sc.next();
 					a[x].setRival(input);
 				}
 				if (sportInput.equals("BASEBALL")) {
-					a[x] = new BaseballPlayer(); // Polymorph from person to
-													// BaseballPlayer.
+					a[x] = new BaseballPlayer(); // Polymorph from person to BaseballPlayer.
 					System.out.println("Enter the persons handing: ");
 					input = sc.next();
 					a[x].setHanding(input);
@@ -218,22 +201,19 @@ public class TestClass {
 					a[x].setBattingPosition(inputInt);
 				}
 				if (sportInput.equals("FOOTBALL")) {
-					a[x] = new FootballPlayer(); // Polymorph from person to
-													// FootballPlayer.
+					a[x] = new FootballPlayer(); // Polymorph from person to FootballPlayer.
 					System.out.println("Enter the persons specialty: ");
 					input = sc.next();
 					a[x].setSpecialty(input);
 				}
 				if (sportInput.equals("GOLF")) {
-					a[x] = new GolferPlayer(); // Polymorph from person to
-												// GolferPlayer.
+					a[x] = new GolferPlayer(); // Polymorph from person to GolferPlayer.
 					System.out.println("Enter the persons main sponser: ");
 					input = sc.next();
 					a[x].setMainSponser(input);
 				}
 				if (sportInput.equals("HOCKEY")) {
-					a[x] = new HockeyPlayer(); // Polymorph from person to
-												// HockeyPlayer.
+					a[x] = new HockeyPlayer(); // Polymorph from person to HockeyPlayer.
 					System.out.println("Enter the persons stick brand: ");
 					input = sc.next();
 					a[x].setStickBrand(input);
@@ -278,26 +258,18 @@ public class TestClass {
 				}
 
 				int w = 0, q = 0;
-				System.out.println(
-						"Enter two player numbers to see if they play the same sport.\nFirst person's player number: ");
+				System.out.println("Enter two player numbers to see if they play the same sport.\nFirst person's player number: ");
 				w = sc.nextInt();
 				System.out.println("Second person's player number: ");
 				q = sc.nextInt();
 
-				if (w < x && q < x && a[w].getSport().equals(a[q].getSport()) == true) { // Parameters
-																							// to
-																							// see
-																							// if
-																							// the
-																							// players
-																							// exist.
+				if (w < x && q < x && a[w].getSport().equals(a[q].getSport()) == true) { // Parameters to see if the players exist.
 					System.out.println("The two players play the same sport.");
 				}
 
 				if (w < x && q < x && a[w].getSport().equals(a[q].getSport()) == false) {
 					System.out.println("The two players don't play the same sport.");
-				} else { // If entered number is out of parameter, it will lead
-							// to else statement.
+				} else { // If entered number is out of parameter, it will lead to else statement.
 					System.out.println("One of the player numbers was invalid, returning to menu.");
 				}
 
@@ -305,8 +277,7 @@ public class TestClass {
 				System.out.println(menu);
 			}
 
-			else if (input.equals("D")) { // Display what every athlete does
-											// choice.
+			else if (input.equals("D")) { // Display what every athlete does choice.
 				for (int i = 0; a[i].age >= 18; i++) {
 					System.out.println("Person " + i + ": " + a[i].firstName + " " + a[i].lastName + " is a "
 							+ a[i].position + ".");
