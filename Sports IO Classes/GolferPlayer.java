@@ -1,5 +1,5 @@
 
-public class GolferPlayer extends SportsPlayerAbstract {
+public class GolferPlayer extends SportsPlayerAbstract {	// Class with some initialized parameters with some setters/getters/actions
 	public String mainSponser; // GolferPlayers unique variable.
 
 	public GolferPlayer() {
