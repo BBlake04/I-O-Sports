@@ -1,5 +1,5 @@
 
-public class Name implements SetStuff{
+public class Name implements SetStuff{	// Class that utilizes a ton of setters for later
 	public String firstName, lastName;
 	
 	public Name(){
