@@ -1,5 +1,5 @@
 
-public class HockeyPlayer extends SportsPlayerAbstract{
+public class HockeyPlayer extends SportsPlayerAbstract{	// Class with some initialized parameters with some setters/getters/actions
 	String stickBrand; // HockeyPlayers unique variable.
 
 	HockeyPlayer() {
